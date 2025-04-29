@@ -1,4 +1,4 @@
-# 🔒 SecCrud
+# 🔒 VulnDB
 
 API REST para gerenciamento de vulnerabilidades de segurança da informação com integração PostgreSQL.
 
@@ -123,7 +123,7 @@ dotnet run
 ## 🗂️ Estrutura do Projeto
 
 ```
-SecCrud/
+VulnDB/
 ├── Controllers/         # Controladores da API
 │   ├── VulnerabilidadesController.cs
 │   ├── AtivosController.cs
