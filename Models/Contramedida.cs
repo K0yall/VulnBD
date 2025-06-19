@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization; // Importante para o JsonIgnore
 using VulnerabilityManager.Models;
 
 public class Contramedida
@@ -11,6 +12,6 @@ public class Contramedida
     [Required(ErrorMessage = "O ID da vulnerabilidade é obrigatório")]
     public int VulnerabilidadeId { get; set; }
 
-    // Propriedade de navegação (não obrigatória no input)
+    [JsonIgnore] // Evita serializar e causar ciclo infinito no JSON
     public Vulnerabilidade? Vulnerabilidade { get; set; }
 }
